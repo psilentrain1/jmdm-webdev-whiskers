@@ -57,6 +57,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 1.1rem;
@@ -357,9 +361,6 @@ button:active {
   gap: 2rem;
 }
 
-.monthly__image {
-}
-
 .monthly__image img {
   width: 300px;
 }
@@ -417,7 +418,7 @@ footer {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -447,6 +448,18 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.modal__sent {
+  display: none;
+}
+
+.modal__sent__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
 }
 
 .close {

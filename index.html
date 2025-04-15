@@ -28,7 +28,7 @@
       <div class="hero__content">
         <h1>Professional Care for Your Pet</h1>
         <div class="subtitle">Your neighborhood pet grooming sanctuary where tails never stop wagging.</div>
-        <div class="hero__button"><button type="button">Request Appointment</button></div>
+        <div class="hero__button"><button id="hero-button" type="button">Request Appointment</button></div>
       </div>
       <div class="tagline"><em>We believe every pet deserves to be treated with the same love and care they give us every day!</em></div>
     </section>
@@ -222,7 +222,7 @@
     </section>
     <section id="contact">
       <h2>Book Your Pet's Spa Day</h2>
-      <div class="contact__cta"><button type="button">Request Appointment</button></div>
+      <div class="contact__cta"><button id="cta-button" type="button">Request Appointment</button></div>
       <div class="contact__info">
         <div class="contact__details">
           <strong>Phone: </strong>(555) 123-PETS<br /><strong>Email: </strong>appointments@whiskersandwags.com<br /><strong
@@ -243,9 +243,9 @@
     <!-- Modal -->
     <div id="appointment-modal" class="modal">
       <div class="modal__content">
-        <span class="close">&times;</span>
+        <span id="modal-close" class="close">&times;</span>
         <h3>Request an Appointment</h3>
-        <form action="">
+        <form id="modal-form" action="">
           <div><label for="name">Name:</label> <input type="text" id="name" name="name" required /></div>
 
           <div><label for="email">Email:</label> <input type="email" id="email" name="email" required /></div>
@@ -253,17 +253,27 @@
           <div><label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" required /></div>
 
           <div>
-            <label for="pet-type">Pet Type:</label> <input type="radio" name="pet-type" id="dog" /> Dog
-            <input type="radio" name="pet-type" id="cat" /> Cat
+            <label for="pet-type">Pet Type:</label> <input type="radio" name="pet-type" id="dog" value="dog" /> Dog
+            <input type="radio" name="pet-type" id="cat" value="cat" /> Cat
           </div>
 
           <div><label for="pet-name">Pet Name:</label> <input type="text" id="pet-name" name="pet-name" required /></div>
 
-          <div><label for="message">Message:</label> <textarea id="message" name="message"></textarea></div>
+          <div>
+            <label for="message">Message:</label> <textarea id="message" name="message"></textarea>
+            <input type="hidden" id="click-source" name="clkSource" />
+          </div>
 
-          <div class="buttons"><button type="submit">Submit</button> <button type="button" class="cancel">Cancel</button></div>
+          <div class="buttons"><button type="submit">Submit</button> <button id="modal-cancel" type="button">Cancel</button></div>
         </form>
+        <div id="modal-sent" class="modal__sent">
+          <h3>Thank you for your request!</h3>
+          <p>We will get back to you within 24 hours to confirm your appointment.</p>
+          <div class="modal__sent__button">
+            <button id="btn-modal-sent" type="button">Close</button>
+          </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
