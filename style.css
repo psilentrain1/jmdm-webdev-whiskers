@@ -34,6 +34,9 @@
   --clr-gray-800: #363936;
   --clr-gray-900: #30322f;
   --clr-gray-950: #191a19;
+
+  /* Sizing */
+  --width: calc((100vw - 800px) / 2);
 }
 
 @property --btn-clr-1 {
@@ -67,7 +70,7 @@ header {
   height: 80px;
   position: sticky;
   top: 0;
-  padding: 0 calc((100vw - 1000px) / 2);
+  padding: 0 var(--width);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -110,7 +113,7 @@ h2 {
 }
 
 section {
-  padding: 2rem calc((100vw - 1000px) / 2);
+  padding: 2rem var(--width);
 }
 
 button {
@@ -143,7 +146,7 @@ button:active {
   align-items: center;
   gap: 2rem;
   font-size: 1.1rem;
-  padding: 0 calc((100vw - 1000px) / 2);
+  padding: 0 var(--width);
   background-color: var(--clr-primary-950);
   color: var(--clr-primary-50);
 }
@@ -219,7 +222,7 @@ button:active {
 }
 
 .about__text {
-  width: 35%;
+  width: 50%;
 }
 
 .about__text p {
