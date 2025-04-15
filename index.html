@@ -12,14 +12,14 @@
   <body>
     <header>
       <div class="logo">
-        <a href=""><img src="./mystuff/logoText2-light.png" alt="The logo for Whiskers & Wags Pet Grooming" /></a>
+        <a href="#hero"><img src="./mystuff/logoText2-light.png" alt="The logo for Whiskers & Wags Pet Grooming" /></a>
       </div>
       <nav>
         <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -207,6 +207,19 @@
         </div>
       </div>
     </section>
+    <section id="monthly">
+      <h2>Monthly Feature</h2>
+      <div class="monthly">
+        <div class="monthly__image">
+          <img src="./assets/monthly.jpg" alt="Painting the nails of a dog." />
+        </div>
+        <div class="monthly__details">
+          <h3>April Pawdicure Special</h3>
+          <p>This month only: Add a pet-safe nail polish to any grooming package for just $10.</p>
+          <p>Choose from our selection of non-toxic, water-based colors to give your pet the ultimate style statement!</p>
+        </div>
+      </div>
+    </section>
     <section id="contact">
       <h2>Book Your Pet's Spa Day</h2>
       <div class="contact__cta"><button type="button">Request Appointment</button></div>
@@ -226,5 +239,31 @@
       </div>
     </section>
     <footer>&copy; 2025 James Drake Tech. All rights reserved.</footer>
+
+    <!-- Modal -->
+    <div id="appointment-modal" class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <h3>Request an Appointment</h3>
+        <form action="">
+          <div><label for="name">Name:</label> <input type="text" id="name" name="name" required /></div>
+
+          <div><label for="email">Email:</label> <input type="email" id="email" name="email" required /></div>
+
+          <div><label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" required /></div>
+
+          <div>
+            <label for="pet-type">Pet Type:</label> <input type="radio" name="pet-type" id="dog" /> Dog
+            <input type="radio" name="pet-type" id="cat" /> Cat
+          </div>
+
+          <div><label for="pet-name">Pet Name:</label> <input type="text" id="pet-name" name="pet-name" required /></div>
+
+          <div><label for="message">Message:</label> <textarea id="message" name="message"></textarea></div>
+
+          <div class="buttons"><button type="submit">Submit</button> <button type="button" class="cancel">Cancel</button></div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
